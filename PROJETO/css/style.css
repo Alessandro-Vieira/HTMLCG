@@ -90,3 +90,32 @@ body{
     height: 100px;
     border-radius: 1em;
   }
+
+  .mapa{
+      margin-top: 3%;
+      margin-left: 15%;
+  }
+
+  .contents table{
+      margin-left: 26%;
+      text-align: center;
+  }
+
+  .zap{
+      margin-left: 40%;
+      width: 100px;
+      height: 100px;
+  }
+
+  figure.imagem{
+      display: inline-block;
+      margin-left: 12%;
+      padding: 1%;
+      border-radius: 1px;
+      background: #ffffff;
+      text-align: center;
+  }
+
+  figcaption{
+      font-size:10px;
+  }
