@@ -119,3 +119,11 @@ body{
   figcaption{
       font-size:10px;
   }
+
+  .grupo{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      margin-top: 2%;
+      margin-left: 5%;
+      padding: 2%;
+  }
