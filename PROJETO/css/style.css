@@ -1,129 +1,196 @@
-body{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background: #dddddd url(../img/rio.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: #dddddd url(../img/rio.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-.container{
-    margin: 2% auto;
-    width: 80%;
-    text-align: left;
-    background: #ffffff;
-    border: 1px solid black;
+.container {
+  margin: 1px auto;
+  width: 800px;
+  text-align: left;
+  background: #ffffff;
+  border: 1px solid #676767;
 }
 
-.mainav{
-    background-color: burlywood;
-    color: black;
-    padding: 0 1%;
-    margin-bottom: 2%;
-    margin-top: 8%;
+.header {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
 }
 
-.mainav li{
-    display: inline;
-    padding: 0 1%;
-    margin-left: 7%;
+.header h2 {
+  position: absolute;
+  margin-left: 12%;
+  margin-top: 3%;
+  font-size: 30px;
 }
 
-.mainav li a{
-    text-decoration: none;
-    color:black;
-    font-size: 16px;
+.mainnav {
+  background-color: #9fa41d;
+  color: #272900;
+  padding: 0 10px;
+  margin-bottom: 10px;
 }
 
-.mainav li a:hover{
-    text-decoration: none;
-    color:white;
-    font-size: 16px;
-    background-color: rgb(175, 156, 130);
+.mainnav li {
+  display: inline;
+  padding: 0 5px;
+  border-right: 1px solid #c4c769;
+  margin-left: 3%;
 }
 
-.contents{
-    float: left;
-    width:65%;
-    margin: 0 0 0 3%;
+.mainnav li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
 }
 
-.contents p{
-    font-size: 16px;
-    text-align: justify;
+.mainnav li a:hover,
+a:active {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #272900;
 }
 
-.footer{
-    clear: both;
-    background-color: burlywood;
-    color:black;
-    text-align: right;
-    font-size: 14px;
-    padding: 2%;
-    font-weight: bold;
+.contents {
+  float: left;
+  width: 500px;
+  margin: 0 0 0 10px;
 }
 
-.logo{
-    width: 10%;
-    height: 10%;
-    float: left;
+.contents p {
+  font-size: 90%;
+  text-align: justify;
 }
 
-.menul{
-    float: right;
-    margin-right: 3%;
-    margin-top: 7%;
+.footer {
+  clear: both;
+  color: #272900;
+  text-align: right;
+  font-size: 80%;
+  background-color: #9fa41d;
+  padding: 5px;
+  font-weight: bold;
 }
 
 .carrossel {
-    display: inline-block;
-    margin-top: 5%;
-    padding: 2%;
-    border-radius: 1em;
-    background-color: burlywood;
-  }
-  
-  img {
-    width: 100px;
-    height: 100px;
-    border-radius: 1em;
-  }
+  display: inline-block;
+  margin-top: 5%;
+  padding: 2%;
+  border-radius: 1em;
+  background: #9fa41d;
+}
 
-  .mapa{
-      margin-top: 3%;
-      margin-left: 15%;
-  }
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 1em;
+}
 
-  .contents table{
-      margin-left: 26%;
-      text-align: center;
-  }
+.logo {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-top: 1%;
+}
 
-  .zap{
-      margin-left: 40%;
-      width: 100px;
-      height: 100px;
-  }
+.menul {
+  float: right;
+  width: 250px;
+  padding-left: 30px;
+  padding-top: 50px;
+}
 
-  figure.imagem{
-      display: inline-block;
-      margin-left: 12%;
-      padding: 1%;
-      border-radius: 1px;
-      background: #ffffff;
-      text-align: center;
-  }
+.grupo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 450px;
+  margin-top: 70px;
+  margin-left: 20px;
+  padding: 10px;
+}
 
-  figcaption{
-      font-size:10px;
-  }
+.maior {
+  font-size: 14px;
+  width: 280px;
+  resize: none;
+}
 
-  .grupo{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      margin-top: 2%;
-      margin-left: 5%;
-      padding: 2%;
-  }
+.grupo input,
+select,
+textarea {
+  background-color: #dddddd;
+}
+
+.grupo input:hover,
+input:focus,
+select:hover,
+select:focus,
+textarea:hover,
+textarea:focus {
+  border-color: black;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+figure.imagem {
+  display: inline-block;
+  margin-left: 10%;
+  padding: 10px;
+  border-radius: 1px;
+  background: #ffffff;
+  text-align: center;
+}
+
+figcaption,
+a {
+  font-size: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+figure.imagem:hover {
+  background: #c0c0c0;
+}
+
+.mapa {
+  margin-top: 5%;
+  margin-left: 11%;
+}
+
+.zap {
+  margin-left: 40%;
+  width: 100px;
+  height: 100px;
+}
+
+.contents table {
+  margin-left: 25%;
+  text-align: center;
+}
+
+.contents li {
+  font-size: 90%;
+  text-align: justify;
+}
+
+.login {
+  margin-left: 75%;
+}
+
+.restrito {
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 10%;
+}
+
+.checkbox {
+  color: white;
+}
