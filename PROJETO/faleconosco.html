@@ -1,103 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/style.css" />
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Cariocando</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <div class="header">
-        <a href="index.html"><img class="logo" src="img/logo.jpg" /></a>
-        <h2>Rio de Janeiro - Cidade Maravilhosa</h2>
-      </div>
-      <div class="mainnav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="quemsomos.html">Quem Somos</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="faleconosco.html">Fale Conosco</a></li>
-          <li><a href="restrito.html">Acesso Restrito</a></li>
-        </ul>
-      </div>
-      <div class="menul">
-        <iframe
-          allowtransparency="true"
-          marginwidth="0"
-          marginheight="0"
-          hspace="0"
-          vspace="0"
-          frameborder="0"
-          scrolling="no"
-          src="https://www.cptec.inpe.br/widget/widget.php?p=241&w=v&c=909090&f=ffffff"
-          height="350px"
-          width="192px"
-        ></iframe
-        ><noscript
-          >Previs&atilde;o de
-          <a href="http://www.cptec.inpe.br/cidades/tempo/241"
-            >Rio de Janeiro/RJ</a
-          >
-          oferecido por
-          <a href="http://www.cptec.inpe.br">CPTEC/INPE</a></noscript
-        >
-      </div>
-      <div class="contents">
-        <form name="faleconosco" onsubmit="msg();">
-          <fieldset class="grupo">
-            <legend>Fale Conosco</legend>
+        <div class="header">
+            <a href="index.html"><img class="logo" src="img/logo.jpg"></a>
+             <h2 class="titulo">Rio de Janeiro - Cidade Maravilhosa</h2>
+             <div class="restrito">
+                 <form name="restrito">
+                     <fieldset>
+                         <legend>Acesso Restrito</legend>
+                         <input type="text" name="login" placeholder="Informe o seu Login" size="16">
+                         <br>
+                         <input type="password" name="senha" placeholder="Informe a sua senha" size="16">
+                         <br>
+                         <input type="button" value="Acessar">
+                         <input type="button" value="Cadastrar">
+                     </fieldset>
+                 </form>
+             </div>
+         </div>
+        <div class="mainav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="faleconosco.html">Fale Conosco</a></li>
+            </ul>
+        </div>
+        <div class="contents">
+          
+            <form name="faleconosco" method="post" onsubmit="msg()">
+                <fieldset class="grupo">
+                <legend>Fale Conosco</legend>
+                <br>
+                <label>Informe seu Nome:</label>
+                <input type="text" name="nome" placeholder="Digite seu nome aqui" size="50" maxlength="50" required>
+                <br><br>
+                <label>Informe o seu Telefone:</label>
+                <input type="text" name="tel" maxlength="14" placeholder="(00)00000-0000" size="12" onkeypress="mascara_tel(this)">
+                <br><br>
+                <label>Informe seu E-mail:</label>
+                <input type="text" name="email" size="50" required>
+                <br><br>
+                <label>Selecione o Assunto</label>
+                <select name="assunto">
+                    <option value="0">Selecione</option>
+                    <option value="1">Sugestões</option>
+                    <option value="2">Críticas</option>
+                    <option value="3">Elogios</option>
+                    <option value="4">Outros</option>
+                </select>
+                <br><br>
+                <label>Escreva sua Mensagem</label>
+                <br>
+                <textarea name="recado" rows="5" cols="50"></textarea>
+                <br><br>
+                <input type="submit" name="enviar" value="ENVIAR">
+                <input type="reset" name="limpar" value="LIMPAR">
+                </fieldset>
+            </form>
 
-            <label>Informe seu nome:</label>
-            <input
-              type="text"
-              class="maior"
-              name="nome"
-              id="nome"
-              required
-              maxlength="50"
-              placeholder="Digite seu nome completo..."
-              onblur="aumento();"
-            />
-            <br /><br />
-
-            <label>Informe o assunto:</label>
-            <select class="menor" name="assunto" id="assunto">
-              <option value="0">Selecione o Assunto</option>
-              <option value="1">Críticas</option>
-              <option value="2">Sugestões</option>
-              <option value="3">Outros</option>
-            </select>
-            <br /><br />
-
-            <label>Deixe seu recado:</label>
-            <br />
-            <textarea
-              name="recado"
-              class="maior"
-              id="recado"
-              rows="5"
-              required
-              maxlength="100"
-              placeholder="Digite seu recado..."
-            ></textarea>
-            <br /><br />
-
-            <input type="submit" name="enviar" id="enviar" value="ENVIAR" />
-            <input type="reset" name="limpar" id="limpar" value="LIMPAR" />
-          </fieldset>
-        </form>
-      </div>
-      <div class="footer">
-        <address>
-          Construída em 15 de dezembro de 2021 por Alessandro Vieira
-        </address>
-      </div>
+        </div>
+        <div class="menul">
+            <!-- Widget Previs&atilde;o de Tempo CPTEC/INPE --><iframe allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" src="https://www.cptec.inpe.br/widget/widget.php?p=241&w=v&c=909090&f=ffffff" height="350px" width="192px"></iframe><noscript>Previs&atilde;o de <a href="http://www.cptec.inpe.br/cidades/tempo/241">Rio de Janeiro/RJ</a> oferecido por <a href="http://www.cptec.inpe.br">CPTEC/INPE</a></noscript><!-- Widget Previs&atilde;o de Tempo CPTEC/INPE -->
+        </div>
+        <div class="footer">
+            <address>Página Produzida por Alessandro Vieira em 2022.</address>
+        </div>
     </div>
-  </body>
+</body>
 </html>
-<script
-  type="text/javascript"
-  language="javascript"
-  src="js/funcao.js"
-></script>
+<script type="text/javascript" src="js/funcao.js"></script>
